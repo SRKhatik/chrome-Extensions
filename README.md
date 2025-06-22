@@ -46,7 +46,7 @@ g. Click anywhere on the page to close the notification.
  - Icon changes to Shopify green icon.
  - Notification badge appears.
 4. If not:
- - Icon remains the default gray icon.
+ - Icon remains the default red icon.
 5. Notification disappears automatically when clicked.
 
 6 Benefits of This Extension:
