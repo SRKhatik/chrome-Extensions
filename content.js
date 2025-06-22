@@ -9,7 +9,7 @@
      
         const notification = document.createElement('div');
         notification.id = 'shopify-detector-notification';
-        notification.innerText = "✅ Built with Shopify";
+        notification.innerHTML = "Yes Built with Shopify";
         notification.style.cssText = `
             position: fixed;
             bottom: 20px;
