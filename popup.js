@@ -6,14 +6,27 @@ chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
         },
     }, (results) => {
         const statusElement = document.getElementById('status');
+
+        const baseStyle = 'display: flex; align-items: center; font-family: Arial, sans-serif; font-size: 16px; color: #333;';
+
         if (results[0].result) {
-            statusElement.innerHTML = "<img src='icons/checked.png' alt='Checked' style='width: 20px; height: 20px;' /> Built with Shopify";
+            statusElement.innerHTML = `
+                <div style="${baseStyle}">
+                    <img src="icons/checked.png" alt="Checked" style="width: 20px; height: 20px; margin-right: 8px;" />
+                    Built with Shopify
+                </div>
+            `;
         } else {
-            statusElement.innerHTML = "<img src='icons/delete.png' alt='Unchecked' style='width: 20px; height: 20px;' /> Not a Shopify Store";
+            statusElement.innerHTML = `
+                <div style="${baseStyle}">
+                    <img src="icons/delete.png" alt="Unchecked" style="width: 20px; height: 20px; margin-right: 8px;" />
+                    Not a Shopify Store
+                </div>
+            `;
         }
 
         document.body.addEventListener('click', () => {
-            window.close(); 
+            window.close();
         });
     });
 });
